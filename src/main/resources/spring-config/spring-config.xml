@@ -32,5 +32,5 @@
 	<!-- <context:component-scan base-package="com.tca.service"/> -->
 	<!-- 扫描dao和service -->
 	<context:component-scan base-package="com.tca"/>
-		
+	
 </beans>

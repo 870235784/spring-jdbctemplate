@@ -59,4 +59,9 @@ public class Student implements Serializable{
 		this.sgender = sgender;
 	}
 
+	@Override
+	public String toString() {
+		return "Student [sid=" + sid + ", sname=" + sname + ", sage=" + sage + ", sgender=" + sgender + "]";
+	}
+	
 }
