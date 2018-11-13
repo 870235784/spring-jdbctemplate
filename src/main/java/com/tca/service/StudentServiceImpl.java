@@ -6,6 +6,7 @@ import java.util.List;
 import org.slf4j.Logger;
 import org.slf4j.LoggerFactory;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.scheduling.annotation.Scheduled;
 import org.springframework.stereotype.Service;
 
 import com.tca.beans.Student;
@@ -85,5 +86,14 @@ public class StudentServiceImpl {
 			e.printStackTrace();
 		}
 		return new ArrayList<Student>();
+	}
+	
+	@Scheduled(cron="0/10 * *  * * ? ")
+	public void doBusiness() {
+		Student student = new Student();
+		student.setSage(0);
+		student.setSgender("male");
+		student.setSname("test");
+		insertStudent(student);
 	}
 }
